@@ -1,16 +1,6 @@
-import React from "react";
-import { render } from "react-dom";
-import { BrowserRouter, Match, Miss } from 'react-router';
-
+import React from 'react';
+import { render } from 'react-dom';
 import './css/style.css';
+import App from './components/App';
 
-const Root = () => {
-    return (
-        <BrowserRouter>
-            <h1>THE BOTANIST</h1>
-        </BrowserRouter>
-    )
-
-}
-
-render(<Root/>, document.querySelector('#main')); 
+render(<App/>, document.querySelector('#main'));
