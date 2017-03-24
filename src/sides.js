@@ -1,5 +1,4 @@
-module.exports = {
-
+const sampleSides = {
     side1: {
         name: "Triple cooked chips",
         image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
@@ -25,3 +24,5 @@ module.exports = {
         status: "available"
     }
 };
+
+export default sampleSides

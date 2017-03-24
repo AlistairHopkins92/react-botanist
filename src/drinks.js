@@ -1,4 +1,4 @@
-module.exports = {
+const sampleDrinks = {
 
     drink1: {
         name: "Vodka Martini",
@@ -25,3 +25,5 @@ module.exports = {
         status: "available"
     }
 };
+
+export default sampleDrinks;
