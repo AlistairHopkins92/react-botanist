@@ -1,4 +1,4 @@
-module.exports = {
+const sampleMains = {
   main1: {
     name: 'Chateaubriand',
     image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
@@ -72,3 +72,5 @@ module.exports = {
     sauce: "none"
   }
 };
+
+export default sampleMains;
