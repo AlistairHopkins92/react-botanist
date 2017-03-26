@@ -3,10 +3,7 @@ import { formatPrice } from '../helpers';
 
 class Menu extends React.Component {
     render() {
-        const { details, index } = this.props;
-        const isAvailable = details.status === 'available';
-        const perUnitWeight = details.serving === 100
-        const buttonText = isAvailable ? 'Add To Order' : 'Sold Out!';
+        const { details } = this.props;
         var pricePerHundred
         if(details.serving === 100){
             pricePerHundred = <span>Per 100 grams</span>
@@ -18,7 +15,7 @@ class Menu extends React.Component {
                 <h4 className="mains-name">
                   <span>{details.name}</span>
                 </h4>
-                <img className="mains" src={details.image} />
+                <img className="mains" role="presentation" src={details.image} />
                 <p className="price">{formatPrice(details.price)} {pricePerHundred}</p>
 
             </li>
