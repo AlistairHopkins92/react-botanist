@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import PageHeader from './PageHeader'
 import Menu from './Menu.js';
 import sampleMains from '../mains.js'
 
@@ -23,6 +24,7 @@ loadMenu() {
     return (
       <div className="botanist">
         <Header />
+        <PageHeader />
         <div className="menu">
             <h2>Menu</h2>
             <ul className="menu-content">

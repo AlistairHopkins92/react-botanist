@@ -317,6 +317,9 @@ header.top h3:after {
   top: auto;
   bottom: 7px;
 }
+pageheader.top {
+  text-align: center;
+}
 ul {
   list-style: none;
   margin: 0;
