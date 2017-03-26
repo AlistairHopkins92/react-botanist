@@ -13,11 +13,10 @@ class Menu extends React.Component {
         return (
             <li className="menu-mains">
                 <h4 className="mains-name">
-                  <span>{details.name}</span>
+                    <span>{details.name}</span>
+                    <p className="price">{formatPrice(details.price)} {pricePerHundred}</p>
                 </h4>
                 <img className="mains" role="presentation" src={details.image} />
-                <p className="price">{formatPrice(details.price)} {pricePerHundred}</p>
-
             </li>
         )
     }

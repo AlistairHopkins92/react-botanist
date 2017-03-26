@@ -147,8 +147,6 @@ sub {
 }
 img {
   border: 0;
-  height: 300px;
-  width: 400px;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -420,7 +418,7 @@ ul.order li span.count span {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
 }
-.menu-fish {
+.menu-mains {
   border-bottom: 2px solid #000;
   border-top: 1px solid #000;
   padding-bottom: 2rem;
@@ -429,11 +427,11 @@ ul.order li span.count span {
   clear: both;
   overflow: hidden;
 }
-.menu-fish p {
+.menu-mains p {
   margin: 0;
   font-size: 1.8rem;
 }
-.menu-fish .fish-name {
+.menu-mains .mains-name {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,13 +443,13 @@ ul.order li span.count span {
       -ms-flex-align: center;
           align-items: center;
 }
-.menu-fish .price {
+.menu-mains .price {
   font-size: 1.4rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.menu-fish img {
+.menu-mains img {
   float: left;
   width: 150px;
   margin-right: 1rem;
