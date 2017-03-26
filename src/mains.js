@@ -1,7 +1,7 @@
 const sampleMains = {
   main1: {
     name: 'Chateaubriand',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'https://www.mychicagosteak.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/t/e/tenderloin_roast_-_psg42.jpg',
     price: 1300,
     status: 'available',
     serving: 100,
@@ -10,7 +10,7 @@ const sampleMains = {
   },
   main2: {
     name: 'Porterhouse',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'http://www.finecooking.com/cms/uploadedimages/Images/Cooking/Articles/Issues_121-130/051129001-02-porterhouse-steak-recipe_xlg.jpg',
     price: 925,
     status: 'available',
     serving: 100,
@@ -19,7 +19,7 @@ const sampleMains = {
   },
   main3: {
     name: 'T-bone',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'http://www.francegourmet.kr/wp-content/uploads/2015/03/t-bone.jpg',
     price: 825,
     status: 'available',
     serving: 100,
@@ -28,7 +28,7 @@ const sampleMains = {
   },
   main4: {
     name: 'Bone-in prime rib',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'http://d1x6zkqyb2gtqn.cloudfront.net/wp-content/uploads/2013/12/PrimeRibPhoto.png',
     price: 825,
     status: 'available',
     serving: 100,
@@ -37,7 +37,7 @@ const sampleMains = {
   },
   main5: {
     name: 'Fillet (300g)',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'http://www.finecooking.com/cms/uploadedimages/Images/Cooking/Articles/Issues_121-130/051129001-02-porterhouse-steak-recipe_xlg.jpg',
     price: 3500,
     status: 'available',
     serving: 1,
@@ -46,7 +46,7 @@ const sampleMains = {
   },
   main6: {
     name: 'Sirloin (400g)',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'http://www.atlassteak.com/wp-content/uploads/2016/01/tenderloin-steak.jpg',
     price: 2950,
     status: 'available',
     serving: 1,
@@ -55,7 +55,7 @@ const sampleMains = {
   },
   main7: {
     name: 'Rib-eye (350g)',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'http://www.atlassteak.com/wp-content/uploads/2016/03/the-ribeye-steak-cut.jpg',
     price: 2825,
     status: 'available',
     serving: 1,
@@ -64,7 +64,7 @@ const sampleMains = {
   },
   main8: {
     name: 'Rump (300g)',
-    image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+    image: 'https://s-media-cache-ak0.pinimg.com/736x/50/76/e9/5076e98c63092d721c6c0708d29bf986.jpg',
     price: 1875,
     status: 'available',
     serving: 1,
