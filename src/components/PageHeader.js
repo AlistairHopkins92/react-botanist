@@ -4,7 +4,7 @@ import React from 'react';
 const PageHeader = (props) => {
   return (
     <pageheader className="top">
-      <h4>Steak</h4>
+      <h2>Menu</h2>
     </pageheader>
   )
 }

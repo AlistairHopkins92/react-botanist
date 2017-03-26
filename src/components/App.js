@@ -11,7 +11,7 @@ constructor() {
   }
   
 state = {
-    mains: {}
+    mains: sampleMains
   };
 
 loadMenu() {
@@ -26,7 +26,7 @@ loadMenu() {
         <Header />
         <PageHeader />
         <div className="menu">
-            <h2>Menu</h2>
+            <h4>Meat</h4>
             <ul className="menu-content">
                 {
               Object
