@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import PageHeader from './PageHeader'
-import Menu from './Menu.js';
+import Mains from './Menu.js';
 import sampleMains from '../mains.js'
+import sampleSides from '../sides.js'
 
 class App extends React.Component {
 constructor() {
@@ -11,12 +12,14 @@ constructor() {
   }
   
 state = {
-    mains: sampleMains
+    mains: sampleMains,
+    sides: sampleSides
   };
 
 loadMenu() {
     this.setState({
-      mains: sampleMains
+      mains: sampleMains,
+      sides: sampleSides
     });
   }
 
@@ -31,7 +34,7 @@ loadMenu() {
                 {
               Object
                 .keys(this.state.mains)
-                .map(key => <Menu key={key} index={key} details={this.state.mains[key]}/>)
+                .map(key => <Mains key={key} index={key} details={this.state.mains[key]}/>)
             }
             </ul>
         </div>

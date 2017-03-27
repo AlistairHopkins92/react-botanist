@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatPrice } from '../helpers';
 
-class Menu extends React.Component {
+class Mains extends React.Component {
     render() {
         const { details } = this.props;
         var pricePerHundred
@@ -21,4 +21,4 @@ class Menu extends React.Component {
         )
     }
 }
-export default Menu;
+export default Mains;
