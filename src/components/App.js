@@ -11,7 +11,7 @@ import sampleDrinks from '../drinks.js';
 class App extends React.Component {
 constructor() {
     super();
-    // this.loadMenu = this.loadMenu.bind(this);
+    this.loadMenu = this.loadMenu.bind(this);
   }
   
 state = {
@@ -22,10 +22,32 @@ state = {
 
 loadMenu(page) {
     console.log(page)
-    // this.setState({
-    //   mains: sampleMains,
-    //   sides: sampleSides
-    // });
+    console.log(this.state)
+    if (page === "mains"){
+      this.setState({
+      mains: sampleMains,
+      sides: {},
+      drinks: {}
+    });
+    } else if (page === "sides"){
+      this.setState({
+      mains: {},
+      sides: sampleSides,
+      drinks: {}
+    });
+    } else if (page === "drinks"){
+      this.setState({
+      mains: {},
+      sides: {},
+      drinks: sampleDrinks
+    });
+    } else {
+      this.setState({
+      mains: {},
+      sides: {},
+      drinks: {}
+    });
+    }
   }
 
   render() {
