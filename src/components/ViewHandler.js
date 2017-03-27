@@ -9,10 +9,8 @@ class ViewHandler extends React.Component {
 
 
   goToStore(event) {
-    console.log(event)
     event.preventDefault();
     const storeId = this.state.vaule;
-    console.log(storeId)
     this.context.router.transitionTo(`/${storeId}`);
   }
 
@@ -21,7 +19,7 @@ class ViewHandler extends React.Component {
     return (
       <form className="store-selector" onSubmit={(e) => this.goToStore(e)}>
         <h2>Please Enter A Role</h2>
-        <select type="text" value={this.state.value} onChange={(input) => { this.storeInput = input}}>
+        <select className="role-selector" type="text" value={this.state.value} onChange={(input) => { this.storeInput = input}}>
           <option value="Customer">Customer</option>
           <option value="Staff">Staff</option>
           <option value="Manager">Manager</option>

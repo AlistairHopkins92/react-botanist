@@ -11,20 +11,21 @@ import sampleDrinks from '../drinks.js';
 class App extends React.Component {
 constructor() {
     super();
-    this.loadMenu = this.loadMenu.bind(this);
+    // this.loadMenu = this.loadMenu.bind(this);
   }
   
 state = {
     mains: sampleMains,
-    sides: sampleSides,
-    drinks: sampleDrinks
+    sides: {},
+    drinks: {}
   };
 
-loadMenu() {
-    this.setState({
-      mains: sampleMains,
-      sides: sampleSides
-    });
+loadMenu(page) {
+    console.log(page)
+    // this.setState({
+    //   mains: sampleMains,
+    //   sides: sampleSides
+    // });
   }
 
   render() {
@@ -32,6 +33,12 @@ loadMenu() {
       <div className="botanist">
         <Header />
         <PageHeader />
+        <span className="pages">
+          <button className="menu-pages" onClick={() => this.loadMenu('mains')}>Mains</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('sides')}>Sides</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Drinks</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('other')}>Other</button>
+        </span>
         <div className="menu">
             <h4>Meat</h4>
             <ul className="menu-content">

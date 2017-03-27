@@ -371,8 +371,8 @@ ul.order li span.count span {
 .order-title {
   text-align: center;
 }
-.fish-edit {
-  margin-bottom: 20px;
+.role-selector {
+  margin: 20px auto;
   border: 2px solid #000;
   overflow: hidden;
   display: -webkit-box;
@@ -381,9 +381,9 @@ ul.order li span.count span {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.fish-edit input,
-.fish-edit textarea,
-.fish-edit select {
+.role-selector input,
+.role-selector textarea,
+.role-selector select {
   width: 33.33%;
   padding: 10px;
   line-height: 1;
@@ -397,19 +397,19 @@ ul.order li span.count span {
   border-radius: 0;
   background: #fff;
 }
-.fish-edit input:focus,
-.fish-edit textarea:focus,
-.fish-edit select:focus {
+.role-selector input:focus,
+.role-selector textarea:focus,
+.role-selector select:focus {
   outline: 0;
   background: #fef2de;
 }
-.fish-edit textarea {
+.role-selector textarea {
   width: 100%;
 }
-.fish-edit input:last-of-type {
+.role-selector input:last-of-type {
   width: 100%;
 }
-.fish-edit button {
+.role-selector button {
   width: 100%;
   border: 0;
 }
@@ -420,6 +420,9 @@ ul.order li span.count span {
   margin-top: 2rem;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
+}
+.menu {
+  margin-top: 20px;
 }
 .menu-mains {
   border-bottom: 2px solid #000;
@@ -559,6 +562,10 @@ button.twitter:after,
 input[type=submit].twitter:after {
   background: #2c8dd0;
 }
+button.menu-pages {
+  width: 25%;
+}
+
 .store-selector {
   background: #fff;
   max-width: 500px;
