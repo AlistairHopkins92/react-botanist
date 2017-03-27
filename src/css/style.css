@@ -317,6 +317,9 @@ header.top h3:after {
   top: auto;
   bottom: 7px;
 }
+.customerView {
+  display: relative;
+}
 pageheader.top {
   text-align: center;
 }

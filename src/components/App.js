@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import PageHeader from './PageHeader';
+import Order from './Order'
 import Mains from './Mains.js';
 import Sides from './Sides.js';
 import Drinks from './Drinks.js';
@@ -61,8 +62,8 @@ loadMenu(page) {
           <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Drinks</button>
           <button className="menu-pages" onClick={() => this.loadMenu('other')}>Other</button>
         </span>
+        <div className="customerView">
         <div className="menu">
-            <h4>Meat</h4>
             <ul className="menu-content">
                 {
               Object
@@ -72,7 +73,6 @@ loadMenu(page) {
             </ul>
         </div>
          <div className="menu">
-            <h4>Sides</h4>
             <ul className="menu-content">
                 {
               Object
@@ -82,7 +82,6 @@ loadMenu(page) {
             </ul>
         </div>
         <div className="menu">
-            <h4>Drinks</h4>
             <ul className="menu-content">
                 {
               Object
@@ -91,6 +90,10 @@ loadMenu(page) {
             }
             </ul>
         </div>
+      </div>
+      <div className="customerView">
+       <Order />
+      </div>
       </div>
     )
   }
