@@ -62,8 +62,8 @@ loadMenu(page) {
           <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Drinks</button>
           <button className="menu-pages" onClick={() => this.loadMenu('other')}>Other</button>
         </span>
+         <div className="menu">
         <div className="customerView">
-        <div className="menu">
             <ul className="menu-content">
                 {
               Object
