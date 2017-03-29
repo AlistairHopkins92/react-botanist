@@ -2,6 +2,7 @@
   width: 33.33%;
   float: right;
   margin-top: 20px;
+  border-bottom: 1px solid #000;
 }
 .order-enter {
   -webkit-transition: 0.5s;
@@ -435,6 +436,7 @@ ul.order li span.count span {
   margin-right: 0px;
   width: 66.66%;
   float: left;
+  border-right: 1px solid #000
 }
 .menu-mains {
   border-bottom: 2px solid #000;
