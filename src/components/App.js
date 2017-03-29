@@ -72,7 +72,7 @@ loadMenu(page) {
             }
             </ul>
         </div>
-         <div className="menu">
+         <div>
             <ul className="menu-content">
                 {
               Object
@@ -81,7 +81,7 @@ loadMenu(page) {
             }
             </ul>
         </div>
-        <div className="menu">
+        <div>
             <ul className="menu-content">
                 {
               Object
