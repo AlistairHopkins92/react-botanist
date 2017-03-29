@@ -1,6 +1,7 @@
 .order {
   width: 33.33%;
   float: right;
+  margin-top: 20px;
 }
 .order-enter {
   -webkit-transition: 0.5s;
@@ -381,6 +382,7 @@ ul.order li span.count span {
 .role-selector {
   margin: 20px auto;
   border: 2px solid #000;
+  border-radius: 0px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -573,7 +575,8 @@ input[type=submit].twitter:after {
   background: #2c8dd0;
 }
 button.menu-pages {
-  width: 25%;
+  width: 24.7%;
+  margin-left: 0.3%;
 }
 
 .store-selector {

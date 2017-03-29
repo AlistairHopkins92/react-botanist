@@ -18,7 +18,8 @@ constructor() {
 state = {
     mains: sampleMains,
     sides: {},
-    drinks: {}
+    drinks: {},
+    header: "Mains"
   };
 
 loadMenu(page) {
@@ -28,27 +29,33 @@ loadMenu(page) {
       this.setState({
       mains: sampleMains,
       sides: {},
-      drinks: {}
+      drinks: {},
+      header: "Mains"
     });
     } else if (page === "sides"){
       this.setState({
       mains: {},
       sides: sampleSides,
-      drinks: {}
+      drinks: {},
+      header: "Sides"
     });
     } else if (page === "drinks"){
       this.setState({
       mains: {},
       sides: {},
-      drinks: sampleDrinks
+      drinks: sampleDrinks,
+      header: "Drinks"
     });
     } else {
       this.setState({
       mains: {},
       sides: {},
-      drinks: {}
+      drinks: {},
+      header: "Other"
+
     });
-    }
+  }
+  
   }
 
   render() {
@@ -62,7 +69,14 @@ loadMenu(page) {
           <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Drinks</button>
           <button className="menu-pages" onClick={() => this.loadMenu('other')}>Other</button>
         </span>
+        <span className="pages">
+          <button className="menu-pages" onClick={() => this.loadMenu('mains')}>option5</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('sides')}>option6</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>option7</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('other')}>option8</button>
+        </span>
          <div className="menu">
+        <h2>{this.state.header}</h2>
         <div className="customerView">
             <ul className="menu-content">
                 {
