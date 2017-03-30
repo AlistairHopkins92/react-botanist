@@ -1,4 +1,5 @@
 import React from 'react';
+import { makePubName } from '../helpers'
 
 class ViewHandler extends React.Component {
   constructor() {
@@ -18,7 +19,8 @@ class ViewHandler extends React.Component {
     // Any where else
     return (
       <form className="store-selector" onSubmit={(e) => this.goToStore(e)}>
-        <h2>Please Enter A Role</h2>
+        <h2>Please Enter A Store and A Role</h2>
+        <input type="text" required placeholder="Store Name" defaultValue={makePubName()} />
         <select className="role-selector" type="text" value={this.state.value} onChange={(input) => { this.storeInput = input}}>
           <option value="Customer">Customer</option>
           <option value="Staff">Staff</option>
