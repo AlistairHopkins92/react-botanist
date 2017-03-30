@@ -470,9 +470,12 @@ ul.order li span.count span {
           justify-content: flex-end;
 }
 .menu-mains img {
-  float: left;
-  width: 150px;
-  margin-right: 1rem;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+}
+.menu-mains button {
+  text-align: center;
 }
 button,
 input[type=submit] {
