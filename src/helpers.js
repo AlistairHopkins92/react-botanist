@@ -14,3 +14,11 @@ export function slugify(text) {
     .replace(/^-+/, '')             // Trim - from start of text
     .replace(/-+$/, '');            // Trim - from end of text
 }
+
+export function makePubName() {
+  const word1 = ['Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']
+  const word2 = ['Lonely', 'Drunk', 'Quiet', 'Noble', 'Hungry', 'Thirsty', 'Restless', 'Pensive', 'Wishful'];
+  const word3 = ['Queens', 'Kings', 'Kinghts', 'Scholars', 'Poets', 'Bankers', 'Lords'];
+
+  return `The-${rando(word1)}-${rando(word2)}-${rando(word3)}`;
+}
