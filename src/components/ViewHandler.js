@@ -5,7 +5,7 @@ class ViewHandler extends React.Component {
   constructor() {
     super();
     this.goToStore = this.goToStore.bind(this);
-    // this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.state = {roleValue: 'Customer'};
   }
 
@@ -14,19 +14,16 @@ class ViewHandler extends React.Component {
     event.preventDefault();
     // const storeId = this.state.vaule;
     const pubName = this.storeName.value;
-    const restaurantRole = this.storeRole;
-    console.log('you changed the url')
-    console.log(pubName)
-    console.log(this.state.roleValue)
-    console.log(restaurantRole)
+    const restaurantRole = this.state.roleValue
     this.context.router.transitionTo(`/${pubName}/${restaurantRole}`);
   }
 
-//   handleChange(event) {
-//     console.log(event.target.value)
-//     this.storeRole = event.target.value;
-//     this.setState({value: event.target.value});
-//   }
+  handleChange(event) {
+    console.log(event.target.value)
+    this.state.roleValue = event.target.value
+    // this.storeRole = event.target.value;
+    // this.setState({value: event.target.value});
+  }
 
   render() {
     // Any where else
@@ -34,12 +31,12 @@ class ViewHandler extends React.Component {
       <form className="store-selector" onSubmit={(e) => this.goToStore(e)}>
         <h1>Please Enter A Store</h1>
         <input type="text" required placeholder="Store Name" defaultValue={makePubName()} ref={(input) => {this.storeName = input}} />
-        {/*<h1>and A Role</h1>
-        <select className="role-selector" type="text" value={this.state.roleValue} onChange={this.handleChange}>
+        <h1>and A Role</h1>
+        <select className="role-selector" type="text" defaultValue={this.state.roleValue} onChange={this.handleChange}>
           <option value="Customer">Customer</option>
           <option value="Staff">Staff</option>
           <option value="Manager">Manager</option>
-        </select>*/}
+        </select>
         <button type="submit">Visit {this.storeName}→</button>
       </form>
     )
