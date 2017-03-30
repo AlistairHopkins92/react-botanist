@@ -480,7 +480,7 @@ ul.order li span.count span {
 button,
 input[type=submit] {
   text-transform: uppercase;
-  background: none;
+  background: #fff;
   border: 1px solid #000;
   font-weight: 600;
   font-size: 1.5rem;
@@ -495,8 +495,6 @@ input[type=submit][disabled] {
   color: #d12028;
   background: #fff;
   border-color: #d12028;
-  -webkit-transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
-          transform: rotate(-10deg) scale(2) translateX(50%) translateY(-50%);
 }
 button[disabled]:hover,
 input[type=submit][disabled]:hover {

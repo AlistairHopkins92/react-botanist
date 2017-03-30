@@ -4,6 +4,9 @@ import { formatPrice } from '../helpers';
 class Mains extends React.Component {
     render() {
         const { details } = this.props;
+        const isAvailable = details.status === 'available';
+        const buttonText = isAvailable ? "Add To Order" : "Sold Out";
+
         var pricePerHundred
         if(details.serving === 100){
             pricePerHundred = <span>Per 100 grams</span>
@@ -20,7 +23,7 @@ class Mains extends React.Component {
                     <p className="price">{formatPrice(details.price)} {pricePerHundred}</p>
                 </h4>
                 <h4>
-                    <button>Add To Order</button>
+                    <button disabled={!isAvailable}>{buttonText}</button>
                 </h4>
             </li>
         )

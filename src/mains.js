@@ -21,7 +21,7 @@ const sampleMains = {
     name: 'T-bone',
     image: 'http://www.francegourmet.kr/wp-content/uploads/2015/03/t-bone.jpg',
     price: 825,
-    status: 'available',
+    status: 'not available',
     serving: 100,
     servingType: "grams",
     sauce: "none"
