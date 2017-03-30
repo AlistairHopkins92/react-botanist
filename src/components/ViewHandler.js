@@ -5,24 +5,21 @@ class ViewHandler extends React.Component {
   constructor() {
     super();
     this.goToStore = this.goToStore.bind(this);
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleChange.bind(this);
     this.state = {roleValue: 'Customer'};
   }
 
 
   goToStore(event) {
     event.preventDefault();
-    // const storeId = this.state.vaule;
     const pubName = this.storeName.value;
-    const restaurantRole = this.state.roleValue
+    const restaurantRole = this.state.roleValue;
     this.context.router.transitionTo(`/${pubName}/${restaurantRole}`);
   }
 
   handleChange(event) {
     console.log(event.target.value)
-    this.state.roleValue = event.target.value
-    // this.storeRole = event.target.value;
-    // this.setState({value: event.target.value});
+    this.state.roleValue = event.target.value;
   }
 
   render() {
