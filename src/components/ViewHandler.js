@@ -5,28 +5,42 @@ class ViewHandler extends React.Component {
   constructor() {
     super();
     this.goToStore = this.goToStore.bind(this);
-    this.state = {value: 'Customer'};
+    // this.handleChange = this.handleChange.bind(this)
+    this.state = {roleValue: 'Customer'};
   }
 
 
   goToStore(event) {
     event.preventDefault();
-    const storeId = this.state.vaule;
-    this.context.router.transitionTo(`/${storeId}`);
+    // const storeId = this.state.vaule;
+    const pubName = this.storeName.value;
+    const restaurantRole = this.storeRole;
+    console.log('you changed the url')
+    console.log(pubName)
+    console.log(this.state.roleValue)
+    console.log(restaurantRole)
+    this.context.router.transitionTo(`/${pubName}/${restaurantRole}`);
   }
+
+//   handleChange(event) {
+//     console.log(event.target.value)
+//     this.storeRole = event.target.value;
+//     this.setState({value: event.target.value});
+//   }
 
   render() {
     // Any where else
     return (
       <form className="store-selector" onSubmit={(e) => this.goToStore(e)}>
-        <h2>Please Enter A Store and A Role</h2>
-        <input type="text" required placeholder="Store Name" defaultValue={makePubName()} />
-        <select className="role-selector" type="text" value={this.state.value} onChange={(input) => { this.storeInput = input}}>
+        <h1>Please Enter A Store</h1>
+        <input type="text" required placeholder="Store Name" defaultValue={makePubName()} ref={(input) => {this.storeName = input}} />
+        {/*<h1>and A Role</h1>
+        <select className="role-selector" type="text" value={this.state.roleValue} onChange={this.handleChange}>
           <option value="Customer">Customer</option>
           <option value="Staff">Staff</option>
           <option value="Manager">Manager</option>
-        </select>
-        <button type="submit">Visit The Botanist→</button>
+        </select>*/}
+        <button type="submit">Visit {this.storeName}→</button>
       </form>
     )
   }
