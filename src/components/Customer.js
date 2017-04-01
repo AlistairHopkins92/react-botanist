@@ -30,6 +30,7 @@ loadMenu(page) {
       this.setState({
       mains: sampleMains,
       sides: {},
+      starters: {},
       drinks: {},
       header: "Mains"
     });
@@ -37,6 +38,7 @@ loadMenu(page) {
       this.setState({
       mains: {},
       sides: sampleSides,
+      starters: {},
       drinks: {},
       header: "Sides"
     });
@@ -52,6 +54,7 @@ loadMenu(page) {
       this.setState({
       mains: {},
       sides: {},
+      starters: {},
       drinks: sampleDrinks,
       header: "Drinks"
     });
@@ -59,6 +62,7 @@ loadMenu(page) {
       this.setState({
       mains: {},
       sides: {},
+      starters: {},
       drinks: {},
       header: "Other"
 
@@ -111,7 +115,6 @@ loadMenu(page) {
             }
             </ul>
         </div>
-      </div>
       <div>
             <ul className="menu-content">
                 {
@@ -120,6 +123,7 @@ loadMenu(page) {
                 .map(key => <Starters key={key} index={key} details={this.state.starters[key]}/>)
             }
             </ul>
+        </div>
         </div>
       <div className="customerView">
        <Order />
