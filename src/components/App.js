@@ -23,8 +23,6 @@ state = {
   };
 
 loadMenu(page) {
-    console.log(page)
-    console.log(this.state)
     if (page === "mains"){
       this.setState({
       mains: sampleMains,
