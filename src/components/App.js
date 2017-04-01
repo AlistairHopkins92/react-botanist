@@ -15,9 +15,6 @@ constructor() {
         <Header />
         <PageHeader />
         <Customer />
-      <div className="customerView">
-       <Order />
-      </div>
       </div>
     )
   }

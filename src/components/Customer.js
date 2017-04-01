@@ -101,6 +101,9 @@ loadMenu(page) {
             </ul>
         </div>
       </div>
+      <div className="customerView">
+       <Order />
+      </div>
       </div>
     )
   }
