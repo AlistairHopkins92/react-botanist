@@ -1,4 +1,4 @@
-const sampleSarters = {
+const sampleStarters = {
     sarter1: {
         name: "Roasted Tomato & Red Pepper Soup",
         image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
@@ -20,9 +20,9 @@ const sampleSarters = {
     sarter4: {
         name: "Salt And Pepper Calamari",
         image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
-        price: "675",
+        price: "600",
         status: "available"
     }
 };
 
-export default sampleSarters
+export default sampleStarters

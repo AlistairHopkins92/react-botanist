@@ -5,9 +5,11 @@ import Order from './Order'
 import Mains from './Mains.js';
 import Sides from './Sides.js';
 import Drinks from './Drinks.js';
+import Starters from './Starters.js'
 import sampleMains from '../mains.js';
 import sampleSides from '../sides.js';
 import sampleDrinks from '../drinks.js';
+import sampleStarters from '../starters.js';
 
 class App extends React.Component {
 constructor() {
@@ -19,6 +21,7 @@ state = {
     mains: sampleMains,
     sides: {},
     drinks: {},
+    starters: {},
     header: "Mains"
   };
 
@@ -36,6 +39,14 @@ loadMenu(page) {
       sides: sampleSides,
       drinks: {},
       header: "Sides"
+    });
+    } else if (page === "starters"){
+      this.setState({
+      mains: {},
+      sides: {},
+      drinks: {},
+      starters: sampleStarters,
+      header: "Starters"
     });
     } else if (page === "drinks"){
       this.setState({
@@ -60,16 +71,16 @@ loadMenu(page) {
     return (
       <div>
         <span className="pages">
+          <button className="menu-pages" onClick={() => this.loadMenu('starters')}>Starters</button>
           <button className="menu-pages" onClick={() => this.loadMenu('mains')}>Mains</button>
           <button className="menu-pages" onClick={() => this.loadMenu('sides')}>Sides</button>
-          <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Drinks</button>
-          <button className="menu-pages" onClick={() => this.loadMenu('other')}>Other</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('pudding')}>Puddings</button>
         </span>
         <span className="pages">
-          <button className="menu-pages" onClick={() => this.loadMenu('mains')}>option5</button>
-          <button className="menu-pages" onClick={() => this.loadMenu('sides')}>option6</button>
-          <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>option7</button>
-          <button className="menu-pages" onClick={() => this.loadMenu('other')}>option8</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('bevs')}>Drinks</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Cocktials</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('other')}>Other</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('contact')}>Contact</button>
         </span>
          <div className="menu">
         <h2>{this.state.header}</h2>
@@ -101,6 +112,15 @@ loadMenu(page) {
             </ul>
         </div>
       </div>
+      <div>
+            <ul className="menu-content">
+                {
+              Object
+                .keys(this.state.starters)
+                .map(key => <Starters key={key} index={key} details={this.state.starters[key]}/>)
+            }
+            </ul>
+        </div>
       <div className="customerView">
        <Order />
       </div>
