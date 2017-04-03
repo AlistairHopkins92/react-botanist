@@ -393,7 +393,7 @@ ul.order li span.count span {
 .menu-edit input,
 .menu-edit textarea,
 .menu-edit select {
-  width: 33.33%;
+  width: 50%;
   padding: 10px;
   line-height: 1;
   font-size: 1.2rem;
