@@ -5,11 +5,13 @@ import Order from './Order'
 import Mains from './Mains.js';
 import Sides from './Sides.js';
 import Drinks from './Drinks.js';
-import Starters from './Starters.js'
+import Starters from './Starters.js';
+import Puddings from './Puddings.js';
 import sampleMains from '../mains.js';
 import sampleSides from '../sides.js';
 import sampleDrinks from '../drinks.js';
 import sampleStarters from '../starters.js';
+import samplePuddings from '../puddings.js'
 
 class App extends React.Component {
 constructor() {
@@ -21,6 +23,7 @@ state = {
     mains: {},
     sides: {},
     drinks: {},
+    puddings: {},
     starters: sampleStarters,
     header: "Starters"
   };
@@ -31,6 +34,7 @@ loadMenu(page) {
       mains: sampleMains,
       sides: {},
       starters: {},
+      puddings: {},
       drinks: {},
       header: "Mains"
     });
@@ -39,6 +43,7 @@ loadMenu(page) {
       mains: {},
       sides: sampleSides,
       starters: {},
+      puddings: {},            
       drinks: {},
       header: "Sides"
     });
@@ -47,14 +52,25 @@ loadMenu(page) {
       mains: {},
       sides: {},
       drinks: {},
+      puddings: {},
       starters: sampleStarters,
       header: "Starters"
+    });
+    } else if (page === "puddings"){
+      this.setState({
+      mains: {},
+      sides: {},
+      drinks: {},
+      puddings: samplePuddings,
+      starters: {},
+      header: "Puddings"
     });
     } else if (page === "drinks"){
       this.setState({
       mains: {},
       sides: {},
       starters: {},
+      puddings: {},
       drinks: sampleDrinks,
       header: "Drinks"
     });
@@ -63,6 +79,7 @@ loadMenu(page) {
       mains: {},
       sides: {},
       starters: {},
+      puddings: {},
       drinks: {},
       header: "Other"
 
@@ -78,7 +95,7 @@ loadMenu(page) {
           <button className="menu-pages" onClick={() => this.loadMenu('starters')}>Starters</button>
           <button className="menu-pages" onClick={() => this.loadMenu('mains')}>Mains</button>
           <button className="menu-pages" onClick={() => this.loadMenu('sides')}>Sides</button>
-          <button className="menu-pages" onClick={() => this.loadMenu('pudding')}>Puddings</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('puddings')}>Puddings</button>
         </span>
         <span className="pages">
           <button className="menu-pages" onClick={() => this.loadMenu('bevs')}>Drinks</button>
@@ -121,6 +138,15 @@ loadMenu(page) {
               Object
                 .keys(this.state.starters)
                 .map(key => <Starters key={key} index={key} details={this.state.starters[key]}/>)
+            }
+            </ul>
+        </div>
+        <div>
+            <ul className="menu-content">
+                {
+              Object
+                .keys(this.state.puddings)
+                .map(key => <Starters key={key} index={key} details={this.state.puddings[key]}/>)
             }
             </ul>
         </div>

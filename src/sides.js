@@ -1,25 +1,25 @@
 const sampleSides = {
     side1: {
         name: "Triple cooked chips",
-        image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+        image: 'http://joneville.com/food/wp-content/uploads/2010/03/IMG_6381_1028.jpg',
         price: "350",
         status: "available"
     },
     side2: {
         name: "Beef dripping fries",
-        image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+        image: 'https://cbsnewyork.files.wordpress.com/2012/02/fries.jpg',
         price: "350",
         status: "available"
     },
     side3: {
         name: "Roasted field mushrooms",
-        image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+        image: 'http://img.taste.com.au/RhosJEon/w720-h480-cfill-q80/taste/2016/11/roasted-stuffed-mushrooms-80629-1.jpeg',
         price: "450",
         status: "available"
     },
     side4: {
         name: "Spinach with lemon & garlic",
-        image: 'http://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
+        image: 'http://2.bp.blogspot.com/-RlUczgU2b9Y/UPxeC6HbZAI/AAAAAAAAApE/3Zl7-lOcwmA/s1600/P1010004_1.jpg',
         price: "400",
         status: "available"
     }
