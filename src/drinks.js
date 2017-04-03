@@ -1,4 +1,4 @@
-const sampleDrinks = {
+const sampleCocktails = {
 
     drink1: {
         name: "Vodka Martini",
@@ -26,4 +26,4 @@ const sampleDrinks = {
     }
 };
 
-export default sampleDrinks;
+export default sampleCocktails;

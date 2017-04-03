@@ -9,7 +9,7 @@ import Starters from './Starters.js';
 import Puddings from './Puddings.js';
 import sampleMains from '../mains.js';
 import sampleSides from '../sides.js';
-import sampleDrinks from '../drinks.js';
+import sampleCocktails from '../drinks.js';
 import sampleStarters from '../starters.js';
 import samplePuddings from '../puddings.js'
 
@@ -22,7 +22,7 @@ constructor() {
 state = {
     mains: {},
     sides: {},
-    drinks: {},
+    cocktails: {},
     puddings: {},
     starters: sampleStarters,
     header: "Starters"
@@ -34,7 +34,7 @@ loadMenu(page) {
       sides: {},
       starters: {},
       puddings: {},
-      drinks: {},
+      cocktails: {},
       header: page
     })
 
@@ -54,9 +54,9 @@ loadMenu(page) {
       this.setState({
       puddings: samplePuddings,
     });
-    } else if (page === "drinks"){
+    } else if (page === "cocktails"){
       this.setState({
-      drinks: sampleDrinks,
+      cocktails: sampleCocktails,
     });
   }
   
@@ -72,8 +72,8 @@ loadMenu(page) {
           <button className="menu-pages" onClick={() => this.loadMenu('puddings')}>Puddings</button>
         </span>
         <span className="pages">
-          <button className="menu-pages" onClick={() => this.loadMenu('bevs')}>Drinks</button>
-          <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Cocktials</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('drinks')}>Drinks</button>
+          <button className="menu-pages" onClick={() => this.loadMenu('cocktails')}>Cocktials</button>
           <button className="menu-pages" onClick={() => this.loadMenu('other')}>Other</button>
           <button className="menu-pages" onClick={() => this.loadMenu('contact')}>Contact</button>
         </span>
@@ -101,8 +101,8 @@ loadMenu(page) {
             <ul className="menu-content">
                 {
               Object
-                .keys(this.state.drinks)
-                .map(key => <Drinks key={key} index={key} details={this.state.drinks[key]}/>)
+                .keys(this.state.cocktails)
+                .map(key => <Drinks key={key} index={key} details={this.state.cocktails[key]}/>)
             }
             </ul>
         </div>
