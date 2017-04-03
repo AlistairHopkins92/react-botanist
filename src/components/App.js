@@ -32,7 +32,7 @@ class App extends React.Component {
       <div className="botanist">
         <Header />
         <PageHeader />
-        <Customer />
+        <Customer addItem={this.addItem}/>
       </div>
     )
   }

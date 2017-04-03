@@ -11,12 +11,13 @@ class AddMenuItem extends React.Component {
             status: this.status.value,
             image: this.image.value
         };
-        console.log(item)
+        this.props.addItem(item)
+        this.menuForm.reset();
     }
 
     render() {
         return (
-            <form className='menu-edit' onSubmit={(e) => this.createItem(e)} >
+            <form ref={(input) => this.menuForm = input } className='menu-edit' onSubmit={(e) => this.createItem(e)} >
                 <input ref={(input) => this.name = input} type='text' placeholder='Item Name' />
                 <input ref={(input) => this.price = input} type='text' placeholder='Item Price' />
                 <select ref={(input) => this.status = input} >

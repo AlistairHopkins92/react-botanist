@@ -11,7 +11,7 @@ import sampleMains from '../mains.js';
 import sampleSides from '../sides.js';
 import sampleCocktails from '../drinks.js';
 import sampleStarters from '../starters.js';
-import samplePuddings from '../puddings.js'
+import samplePuddings from '../puddings.js';
 
 class App extends React.Component {
 constructor() {
@@ -126,7 +126,7 @@ loadMenu(page) {
         </div>
         </div>
       <div className="customerView">
-       <Inventory />
+       <Inventory addItem={this.props.addItem}/>
       </div>
       </div>
     )
