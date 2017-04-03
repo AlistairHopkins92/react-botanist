@@ -29,44 +29,34 @@ state = {
   };
 
 loadMenu(page) {
-
     this.setState({
       mains: {},
       sides: {},
       starters: {},
       puddings: {},
       drinks: {},
+      header: page
     })
 
     if (page === "mains"){
       this.setState({
       mains: sampleMains,
-      header: "Mains"
     });
     } else if (page === "sides"){
       this.setState({
       sides: sampleSides,
-      header: "Sides"
     });
     } else if (page === "starters"){
       this.setState({
       starters: sampleStarters,
-      header: "Starters"
     });
     } else if (page === "puddings"){
       this.setState({
       puddings: samplePuddings,
-      header: "Puddings"
     });
     } else if (page === "drinks"){
       this.setState({
       drinks: sampleDrinks,
-      header: "Drinks"
-    });
-    } else {
-      this.setState({
-      header: "Other"
-
     });
   }
   
