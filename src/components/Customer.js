@@ -29,58 +29,42 @@ state = {
   };
 
 loadMenu(page) {
-    if (page === "mains"){
-      this.setState({
-      mains: sampleMains,
+
+    this.setState({
+      mains: {},
       sides: {},
       starters: {},
       puddings: {},
       drinks: {},
+    })
+
+    if (page === "mains"){
+      this.setState({
+      mains: sampleMains,
       header: "Mains"
     });
     } else if (page === "sides"){
       this.setState({
-      mains: {},
       sides: sampleSides,
-      starters: {},
-      puddings: {},            
-      drinks: {},
       header: "Sides"
     });
     } else if (page === "starters"){
       this.setState({
-      mains: {},
-      sides: {},
-      drinks: {},
-      puddings: {},
       starters: sampleStarters,
       header: "Starters"
     });
     } else if (page === "puddings"){
       this.setState({
-      mains: {},
-      sides: {},
-      drinks: {},
       puddings: samplePuddings,
-      starters: {},
       header: "Puddings"
     });
     } else if (page === "drinks"){
       this.setState({
-      mains: {},
-      sides: {},
-      starters: {},
-      puddings: {},
       drinks: sampleDrinks,
       header: "Drinks"
     });
     } else {
       this.setState({
-      mains: {},
-      sides: {},
-      starters: {},
-      puddings: {},
-      drinks: {},
       header: "Other"
 
     });
