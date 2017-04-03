@@ -18,11 +18,11 @@ constructor() {
   }
   
 state = {
-    mains: sampleMains,
+    mains: {},
     sides: {},
     drinks: {},
-    starters: {},
-    header: "Mains"
+    starters: sampleStarters,
+    header: "Starters"
   };
 
 loadMenu(page) {

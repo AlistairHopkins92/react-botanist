@@ -14,6 +14,9 @@ constructor() {
       <div className="botanist">
         <Header />
         <PageHeader />
+        <div className="customerView">
+       <Order />
+      </div>
       </div>
     )
   }
