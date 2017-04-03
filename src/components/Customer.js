@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import PageHeader from './PageHeader';
-import Order from './Order'
+import Inventory from './Inventory'
 import Mains from './Mains.js';
 import Sides from './Sides.js';
 import Drinks from './Drinks.js';
@@ -126,7 +126,7 @@ loadMenu(page) {
         </div>
         </div>
       <div className="customerView">
-       <Order />
+       <Inventory />
       </div>
       </div>
     )
