@@ -380,6 +380,49 @@ ul.order li span.count span {
 .order-title {
   text-align: center;
 }
+.menu-edit {
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.menu-edit input,
+.menu-edit textarea,
+.menu-edit select {
+  width: 33.33%;
+  padding: 10px;
+  line-height: 1;
+  font-size: 1.2rem;
+  border: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background: #fff;
+}
+.menu-edit input:focus,
+.menu-edit textarea:focus,
+.menu-edit select:focus {
+  outline: 0;
+  background: #fef2de;
+}
+.menu-edit textarea {
+  width: 100%;
+}
+.menu-edit input:last-of-type {
+  width: 100%;
+}
+.menu-edit button {
+  width: 100%;
+  border: 0;
+}
+
 .role-selector {
   margin: 20px auto;
   border: 2px solid #000;

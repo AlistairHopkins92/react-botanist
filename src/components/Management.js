@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './Header';
-import Customer from './Customer'
+import Customer from './Customer';
 import PageHeader from './PageHeader';
-import Order from './Order'
+import Inventory from './Inventory.js'
 
 class App extends React.Component {
 constructor() {
@@ -15,7 +15,7 @@ constructor() {
         <Header />
         <PageHeader />
         <div className="customerView">
-       <Order />
+       <Inventory />
       </div>
       </div>
     )
