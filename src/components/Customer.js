@@ -17,6 +17,7 @@ class App extends React.Component {
 constructor() {
     super();
     this.loadMenu = this.loadMenu.bind(this);
+    this.addItem = this.addItem.bind(this);
   }
   
 state = {
@@ -27,6 +28,16 @@ state = {
     starters: sampleStarters,
     header: "Starters"
   };
+
+  addItem(item) {
+    console.log("sdnjgfsidjnf")
+    console.log(item)
+    const mains = {...this.state.mains}
+    const timeStamp = Date.now();
+    console.log(timeStamp)
+    mains[`main-${timeStamp}`] = item;
+    this.setState({ mains });
+}
 
 loadMenu(page) {
     this.setState({
@@ -126,7 +137,7 @@ loadMenu(page) {
         </div>
         </div>
       <div className="customerView">
-       <Inventory addItem={this.props.addItem}/>
+       <Inventory addItem={this.addItem}/>
       </div>
       </div>
     )
