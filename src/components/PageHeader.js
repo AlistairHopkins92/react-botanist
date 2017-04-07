@@ -6,7 +6,7 @@ class PageHeader extends React.Component {
   
         return (
           <pageheader className="top">
-            <h2>{details} View</h2>
+            <h2>Restaurant Pub Manager - {details} View</h2>
           </pageheader>
          )
     }

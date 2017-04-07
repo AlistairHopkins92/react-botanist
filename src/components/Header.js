@@ -1,13 +1,13 @@
 import React from 'react';
 
-
-const Header = (props) => {
-  return (
-    <header className="top">
-      <h1>Pub Restaurant Manager</h1>
-    </header>
-  )
+class Header extends React.Component {
+    render() {  
+        var details = this.props.title
+        return (
+          <header className="top">
+            <h1>{details}</h1>
+          </header>
+         )
+    }
 }
-
-
 export default Header;

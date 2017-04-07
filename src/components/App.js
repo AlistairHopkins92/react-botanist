@@ -18,10 +18,11 @@ class App extends React.Component {
 
 
   render() {
+    const pageTitle = this.props.params.storeId
     return (
       <div className="botanist">
       <div className="backgkgroundImage">
-        <Header />
+        <Header title={pageTitle}/>
         <PageHeader page="Customer"/>
       </div>
         <Customer />
