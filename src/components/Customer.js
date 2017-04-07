@@ -134,9 +134,9 @@ loadMenu(page) {
             </ul>
         </div>
         </div>
-      {/*<div className="Hidden">
+      <div className="Hidden">
        <Inventory addItem={this.addItem}/>
-      </div>*/}
+      </div>
       <div className="customerView">
         <Order />
       </div>
