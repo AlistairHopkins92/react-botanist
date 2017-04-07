@@ -19,9 +19,11 @@ constructor() {
     super();
     this.loadMenu = this.loadMenu.bind(this);
     this.addItem = this.addItem.bind(this);
+    this.addToOrder = this.addToOrder.bind(this);
   }
   
 state = {
+    order: {},
     mains: {},
     sides: {},
     cocktails: {},
@@ -69,7 +71,14 @@ loadMenu(page) {
     });
   }
   
-  }
+}
+
+addToOrder(key) {
+  const order = {...this.state.order}
+  console.log(key)
+  order[key] = order[key] + 1 || 1;
+  this.setState({order})
+}
 
   render() {
     return (
@@ -93,7 +102,7 @@ loadMenu(page) {
                 {
               Object
                 .keys(this.state.mains)
-                .map(key => <Mains key={key} index={key} details={this.state.mains[key]}/>)
+                .map(key => <Mains key={key} index={key} details={this.state.mains[key]} addToOrder={this.addToOrder}/>)
             }
             </ul>
         </div>
