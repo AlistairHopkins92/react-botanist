@@ -5,7 +5,7 @@ import './css/style.css';
 import ViewHandler from './components/ViewHandler';
 import App from './components/App';
 import Staff from './components/Staff';
-import Management from './components/Management';
+import ManagementPage from './components/Management-Page.js';
 import NotFound from './components/NotFound';
 
 
@@ -16,7 +16,7 @@ const Root = () => {
         <Match exactly pattern="/" component={ViewHandler} />
         <Match pattern="/:storeId/Customer" component={App} />
         <Match pattern="/:storeId/Staff" component={Staff} />
-        <Match pattern="/:storeId/Manager" component={Management} />
+        <Match pattern="/:storeId/Manager" component={ManagementPage} />
         <Miss component={NotFound}/>
       </div>
     </BrowserRouter>

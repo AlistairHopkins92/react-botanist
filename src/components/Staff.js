@@ -13,7 +13,7 @@ constructor() {
     return (
       <div className="botanist">
         <Header />
-        <PageHeader />
+        <PageHeader page="Staff"/>
         <Customer />
       </div>
     )

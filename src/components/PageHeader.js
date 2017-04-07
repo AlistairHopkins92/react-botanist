@@ -1,13 +1,15 @@
 import React from 'react';
 
-
-const PageHeader = (props) => {
-  return (
-    <pageheader className="top">
-      <h2>Customer View</h2>
-    </pageheader>
-  )
+class PageHeader extends React.Component {
+    render() {  
+        var details = this.props.page;
+  
+        return (
+          <pageheader className="top">
+            <h2>{details} View</h2>
+          </pageheader>
+         )
+    }
 }
-
 
 export default PageHeader;

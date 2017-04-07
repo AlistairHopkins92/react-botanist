@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import Customer from './Customer';
+import Management from './Management';
 import PageHeader from './PageHeader';
 import Order from './Order';
 import Inventory from './Inventory';
 
 
-class App extends React.Component {
+class ManagementPage extends React.Component {
   constructor() {
     super();
     
@@ -22,12 +22,12 @@ class App extends React.Component {
       <div className="botanist">
       <div className="backgkgroundImage">
         <Header />
-        <PageHeader page="Customer"/>
+        <PageHeader page="Manager"/>
       </div>
-        <Customer />
+        <Management />
       </div>
     )
   }
 }
 
-export default App;
+export default ManagementPage;
