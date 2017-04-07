@@ -231,7 +231,6 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: #d4d4d4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', sans-serif;
@@ -482,11 +481,11 @@ ul.order li span.count span {
   border-right: 1px solid #000
 }
 .menu-mains {
-  border-bottom: 2px solid #000;
-  border-top: 1px solid #000;
+  /*border-bottom: 2px solid #000;*/
+  border-top: 2px solid #000;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  margin-bottom: 5px;
+  /*margin-bottom: 5px;*/
   clear: both;
   overflow: hidden;
 }
@@ -623,7 +622,7 @@ input[type=submit].twitter:after {
 button.menu-pages {
   width: 24.7%;
   margin-left: 0.3%;
-  background: #d4d4d4;
+  /*background: #d4d4d4;*/
 }
 
 .store-selector {

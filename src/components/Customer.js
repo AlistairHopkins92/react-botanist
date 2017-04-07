@@ -30,11 +30,8 @@ state = {
   };
 
   addItem(item) {
-    console.log("sdnjgfsidjnf")
-    console.log(item)
     const mains = {...this.state.mains}
     const timeStamp = Date.now();
-    console.log(timeStamp)
     mains[`main-${timeStamp}`] = item;
     this.setState({ mains });
 }

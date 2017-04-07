@@ -18,7 +18,6 @@ class ViewHandler extends React.Component {
   }
 
   handleChange(event) {
-    console.log(event.target.value)
     this.state.roleValue = event.target.value;
   }
 
