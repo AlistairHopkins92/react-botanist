@@ -16,9 +16,9 @@ export function slugify(text) {
 }
 
 export function makePubName() {
-  const word1 = ['Two', 'Three', 'Four', 'Five', 'Half Dozen', 'Seven', 'Eight', 'Nine', 'Ten', 'Twlevle', 'Twenty', 'Fifty', ' Hundred']
+  const word1 = ['Two', 'Three', 'Four', 'Five', 'Half-Dozen', 'Seven', 'Eight', 'Nine', 'Ten', 'Twlevle', 'Twenty', 'Fifty', ' Hundred']
   const word2 = ['Lonely', 'Drunk', 'Quiet', 'Noble', 'Hungry', 'Thirsty', 'Restless', 'Pensive', 'Wishful', 'Angry'];
-  const word3 = ['Queens', 'Kings', 'Kinghts', 'Scholars', 'Poets', 'Bankers', 'Lords', 'Pesants', 'Bishops'];
+  const word3 = ['Queens', 'Kings', 'Kinghts', 'Scholars', 'Poets', 'Bankers', 'Lords', 'Pesants', 'Bishops', 'Doctors', 'Druids', 'Servants'];
 
   return `The-${rando(word1)}-${rando(word2)}-${rando(word3)}`;
 }

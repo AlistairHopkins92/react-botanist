@@ -8,13 +8,16 @@ class Order extends React.Component {
     }
 
     renderOrder(key) {
+        console.log(key)
+        console.log(this.props.mains[key])
         const main = this.props.mains[key];
+        const starter = this.props.starters[key]
         const count = this.props.order[key];
         
-    if(!main || main.status === 'unavailable') {
-      return <li key={key}>Sorry, {main ? main.name : 'main'} is no longer available!</li>
-    }
-
+    // if(!main || main.status === 'unavailable') {
+    //   return <li key={key}>Sorry, {main ? main.name : 'main'} is no longer available!</li>
+    // }
+    if(this.props.mains[key]){
     if( main.servingType === 'grams') {
         return (
           <li key={key}>
@@ -31,10 +34,12 @@ class Order extends React.Component {
         </li>
         )
     }
+    }
     render() {
         const orderIds = Object.keys(this.props.order)
         const total = orderIds.reduce((prevTotal, key) => {
             const main = this.props.mains[key];
+            const starter = this.props.starters[key]
             const count = this.props.order[key];
             const isAvailable = main && main.status === "available";
             if (isAvailable) {

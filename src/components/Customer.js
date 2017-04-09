@@ -33,11 +33,36 @@ state = {
     currentpage: 'starters',
   };
 
-  addItem(item) {
-    const mains = {...this.state.mains}
+  addItem(item, itemType) {
+    console.log(item)
+    console.log(itemType)
     const timeStamp = Date.now();
-    mains[`main-${timeStamp}`] = item;
-    this.setState({ mains });
+    if(itemType === 'mains'){
+        const mains = {...this.state.mains}
+        mains[`main-${timeStamp}`] = item;
+        this.setState({ mains });
+    } else if ( itemType === 'starters' ){
+        const starters = {...this.state.starters}
+        starters[`starter-${timeStamp}`] = item;
+        this.setState({ starters });
+    } else if ( itemType === 'sides' ){
+        const sides = {...this.state.sides}
+        sides[`side-${timeStamp}`] = item;
+        this.setState({ sides });
+    } else if ( itemType === 'drinks' ){
+        const drinks = {...this.state.drinks}
+        drinks[`drink-${timeStamp}`] = item;
+        this.setState({ drinks });
+    } else if ( itemType === 'puddings' ){
+        const puddings = {...this.state.puddings}
+        puddings[`pudding-${timeStamp}`] = item;
+        this.setState({ puddings });
+    } else if ( itemType === 'cocktails' ){
+        const cocktails = {...this.state.cocktails}
+        cocktails[`cocktail-${timeStamp}`] = item;
+        this.setState({ cocktails });
+    }
+
 }
 renderMenu() {
     if (this.state.currentpage === "mains"){
@@ -56,7 +81,7 @@ renderMenu() {
                 {
               Object
                 .keys(this.state.starters)
-                .map(key => <Starters key={key} index={key} details={this.state.starters[key]}/>)
+                .map(key => <Starters key={key} index={key} details={this.state.starters[key]} addToOrder={this.addToOrder}/>)
             }
           </ul>
         )
@@ -110,7 +135,9 @@ loadMenu(page) {
 }
 
 addToOrder(key) {
+  console.log(key)
   const order = {...this.state.order}
+  console.log(order)
   order[key] = order[key] + 1 || 1;
   this.setState({order})
 }
@@ -140,7 +167,7 @@ addToOrder(key) {
        <Inventory addItem={this.addItem}/>
       </div>
       <div className="customerView">
-        <Order mains={this.state.mains} order={this.state.order}/>
+        <Order mains={this.state.mains} starters={this.state.starters} order={this.state.order}/>
       </div>
       </div>
     )

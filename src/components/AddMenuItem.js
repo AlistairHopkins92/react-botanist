@@ -11,7 +11,7 @@ class AddMenuItem extends React.Component {
             status: this.status.value,
             image: this.image.value
         };
-        this.props.addItem(item)
+        this.props.addItem(item, itemType)
         this.menuForm.reset();
     }
 
@@ -28,7 +28,7 @@ class AddMenuItem extends React.Component {
                     <option value="starters">Starters</option>
                     <option value="mains">Mains</option>
                     <option value="sides">Sides</option>
-                    <option value="deserts">Deserts</option>
+                    <option value="puddings">Deserts</option>
                     <option value="drinks">Drinks</option>
                     <option value="cocktails">Cocktails</option>
                 </select>
