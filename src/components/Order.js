@@ -10,15 +10,23 @@ class Order extends React.Component {
     renderOrder(key) {
         const main = this.props.mains[key];
         const count = this.props.order[key];
-        console.log(main)
-        console.log(count)
+        
     if(!main || main.status === 'unavailable') {
       return <li key={key}>Sorry, {main ? main.name : 'main'} is no longer available!</li>
     }
 
+    if( main.servingType === 'grams') {
+        return (
+          <li key={key}>
+            <span>{count}00 grams {main.name} </span>
+            <span className="price">{formatPrice(count * main.price)}</span>
+        </li>  
+        )
+    }
+
    return (
         <li key={key}>
-            <span>{count}00 grams {main.name}</span>
+            <span>{count} X {main.name} </span>
             <span className="price">{formatPrice(count * main.price)}</span>
         </li>
         )
