@@ -43,12 +43,12 @@ state = {
 
 loadMenu(page) {
     this.setState({
-      mains: {},
-      sides: {},
-      drinks: {},
-      starters: {},
-      puddings: {},
-      cocktails: {},
+      // mains: {},
+      // sides: {},
+      // drinks: {},
+      // starters: {},
+      // puddings: {},
+      // cocktails: {},
       header: page
     })
 
