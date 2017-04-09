@@ -10,6 +10,7 @@ import Starters from './Starters.js';
 import Puddings from './Puddings.js';
 import sampleMains from '../mains.js';
 import sampleSides from '../sides.js';
+import sampleDrinks from '../drinks.js';
 import sampleCocktails from '../cocktails.js';
 import sampleStarters from '../starters.js';
 import samplePuddings from '../puddings.js';
@@ -26,6 +27,7 @@ state = {
     order: {},
     mains: {},
     sides: {},
+    drinks: {},
     cocktails: {},
     puddings: {},
     starters: sampleStarters,
@@ -43,6 +45,7 @@ loadMenu(page) {
     this.setState({
       mains: {},
       sides: {},
+      drinks: {},
       starters: {},
       puddings: {},
       cocktails: {},
@@ -64,6 +67,10 @@ loadMenu(page) {
     } else if (page === "puddings"){
       this.setState({
       puddings: samplePuddings,
+    });
+    } else if (page === "drinks"){
+      this.setState({
+      drinks: sampleDrinks,
     });
     } else if (page === "cocktails"){
       this.setState({
@@ -120,6 +127,15 @@ addToOrder(key) {
               Object
                 .keys(this.state.cocktails)
                 .map(key => <Drinks key={key} index={key} details={this.state.cocktails[key]}/>)
+            }
+            </ul>
+        </div>
+        <div>
+            <ul className="menu-content">
+                {
+              Object
+                .keys(this.state.drinks)
+                .map(key => <Drinks key={key} index={key} details={this.state.drinks[key]}/>)
             }
             </ul>
         </div>

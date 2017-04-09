@@ -14,7 +14,7 @@ const sampleCocktails = {
     },
     drink3: {
         name: "Caipirinha",
-        image: 'https://easyportugueserecipes.com/wp-content/uploads/2013/03/caipiri%C3%B1a.jpg',
+        image: 'http://www.leblon.com/images/1_caipirinha.jpg',
         price: "700",
         status: "available"
     },
