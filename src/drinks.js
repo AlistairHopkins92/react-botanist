@@ -1,29 +1,29 @@
-const sampleCocktails = {
+const sampleDrinks = {
 
     drink1: {
-        name: "Vodka Martini",
-        image: 'http://www.lcbo.com/content/lcbo/en/recipes/my-whisky/recipes/vodka-martini/_jcr_content/left-content/hero_article.img.jpg/1423854136235.jpg',
-        price: "850",
+        name: "Strawberry and Lime Lemonade",
+        image: 'http://homefamilyheart.com/wp-content/uploads/2013/05/watermeloncoolers.jpg',
+        price: "325",
         status: "available"
     },
     drink2: {
-        name: "Cuba Libre",
-        image: 'http://farm6.staticflickr.com/5504/9355124060_b04d706e05_o.jpg',
-        price: "650",
+        name: "Cherry Cooler",
+        image: 'https://s-media-cache-ak0.pinimg.com/originals/02/ed/af/02edaf6267e0ba53ab9690b700ce157c.jpg',
+        price: "400",
         status: "available"
     },
     drink3: {
-        name: "Caipirinha",
-        image: 'https://easyportugueserecipes.com/wp-content/uploads/2013/03/caipiri%C3%B1a.jpg',
-        price: "700",
+        name: "Texas Iced Tea",
+        image: 'https://s-media-cache-ak0.pinimg.com/originals/5d/7f/14/5d7f1477cb8db3f0ed0f5d39fadc2bc3.jpg',
+        price: "400",
         status: "available"
     },
     drink4: {
-        name: "Bloody Mary",
-        image: 'http://farm9.staticflickr.com/8494/8336388032_ff6d142d54_o.jpg',
-        price: "750",
+        name: "Belgian Hot Chocolate",
+        image: 'http://assets.marthastewart.com/styles/wmax-300/d21/0103_edf_hotchocolate/0103_edf_hotchocolate_vert.jpg?itok=wk5vSuAV',
+        price: "375",
         status: "available"
     }
 };
 
-export default sampleCocktails;
+export default sampleDrinks;

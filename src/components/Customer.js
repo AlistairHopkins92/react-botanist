@@ -10,7 +10,7 @@ import Starters from './Starters.js';
 import Puddings from './Puddings.js';
 import sampleMains from '../mains.js';
 import sampleSides from '../sides.js';
-import sampleCocktails from '../drinks.js';
+import sampleCocktails from '../cocktails.js';
 import sampleStarters from '../starters.js';
 import samplePuddings from '../puddings.js';
 
