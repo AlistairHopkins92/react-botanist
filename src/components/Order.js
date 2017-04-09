@@ -1,11 +1,49 @@
 import React from "react";
+import { formatPrice } from "../helpers"
 
 class Order extends React.Component {
-    
+    constructor() {
+        super();
+        this.renderOrder = this.renderOrder.bind(this);
+    }
+
+    renderOrder(key) {
+        const main = this.props.mains[key];
+        const count = this.props.order[key];
+        console.log(main)
+        console.log(count)
+    if(!main || main.status === 'unavailable') {
+      return <li key={key}>Sorry, {main ? main.name : 'main'} is no longer available!</li>
+    }
+
+   return (
+        <li key={key}>
+            <span>{count}00 grams {main.name}</span>
+            <span className="price">{formatPrice(count * main.price)}</span>
+        </li>
+        )
+    }
     render() {
+        const orderIds = Object.keys(this.props.order)
+        const total = orderIds.reduce((prevTotal, key) => {
+            const main = this.props.mains[key];
+            const count = this.props.order[key];
+            const isAvailable = main && main.status === "available";
+            if (isAvailable) {
+                return prevTotal + (count * main.price || 0)
+            }
+            return prevTotal;
+        }, 0)
         return (
             <div className="order">
-                <h2>Order</h2>
+                <h2>Your Order</h2>
+                <ul>
+                    {orderIds.map(this.renderOrder)}
+                    <li className="total">
+                        <strong>Total:</strong>
+                        {formatPrice(total)}
+                    </li>
+                </ul>
             </div>
         );
     }

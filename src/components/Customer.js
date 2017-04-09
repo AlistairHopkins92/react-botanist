@@ -75,7 +75,6 @@ loadMenu(page) {
 
 addToOrder(key) {
   const order = {...this.state.order}
-  console.log(key)
   order[key] = order[key] + 1 || 1;
   this.setState({order})
 }
@@ -147,7 +146,7 @@ addToOrder(key) {
        <Inventory addItem={this.addItem}/>
       </div>
       <div className="customerView">
-        <Order />
+        <Order mains={this.state.mains} order={this.state.order}/>
       </div>
       </div>
     )
