@@ -2,9 +2,6 @@ import React from 'react';
 import Header from './Header';
 import Customer from './Customer';
 import PageHeader from './PageHeader';
-import Order from './Order';
-import Inventory from './Inventory';
-
 
 class App extends React.Component {
   constructor() {
@@ -14,7 +11,6 @@ class App extends React.Component {
       mains: {}
     }
   }
-
 
   render() {
     const pageTitle = this.props.params.storeId
