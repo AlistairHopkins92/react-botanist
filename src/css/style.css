@@ -1,4 +1,4 @@
-.order {
+.order-div {
   padding: 10px;
   width: 33.33%;
   float: right;
@@ -518,6 +518,7 @@ ul.order li span.count span {
   text-align: center;
   width: 50%;
   margin-left: 25%;
+  border: 1px solid #000;
 }
 .menu-mains button {
   text-align: center;
