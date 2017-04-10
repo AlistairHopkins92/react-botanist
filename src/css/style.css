@@ -272,27 +272,7 @@ header.top h1 {
       -ms-flex-pack: center;
           justify-content: center;
 }
-header.top h1 .ofThe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 3rem;
-  color: #f5a623;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: url("images/anchor.svg") center no-repeat;
-  background-size: cover;
-  padding: 0 1rem;
-}
-header.top h1 .ofThe .of {
-  padding-right: 2rem;
-  position: relative;
-  right: -0.5rem;
-}
+
 header.top h3 {
   margin: 0;
   font-size: 2rem;
@@ -322,6 +302,9 @@ header.top h3:after {
 header.top h3:after {
   top: auto;
   bottom: 7px;
+}
+header.top img {
+  width: 50%;
 }
 .customerView {
   display: relative;

@@ -6,6 +6,7 @@ class Header extends React.Component {
         return (
           <header className="top">
             <h1>{details}</h1>
+            <img className="banner" src={require('../css/images/five-stars.png')} role='presentation' />
           </header>
          )
     }
