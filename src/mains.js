@@ -6,7 +6,8 @@ const sampleMains = {
     status: 'available',
     serving: 100,
     servingType: "grams",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   },
   main2: {
     name: 'Porterhouse',
@@ -15,7 +16,8 @@ const sampleMains = {
     status: 'available',
     serving: 100,
     servingType: "grams",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   },
   main3: {
     name: 'T-bone',
@@ -24,7 +26,8 @@ const sampleMains = {
     status: 'not available',
     serving: 100,
     servingType: "grams",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   },
   main4: {
     name: 'Bone-in prime rib',
@@ -33,7 +36,8 @@ const sampleMains = {
     status: 'available',
     serving: 100,
     servingType: "grams",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   },
   main5: {
     name: 'Fillet (300g)',
@@ -42,7 +46,8 @@ const sampleMains = {
     status: 'available',
     serving: 1,
     servingType: "portion",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   },
   main6: {
     name: 'Sirloin (400g)',
@@ -51,7 +56,8 @@ const sampleMains = {
     status: 'available',
     serving: 1,
     servingType: "portion",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   },
   main7: {
     name: 'Rib-eye (350g)',
@@ -60,7 +66,8 @@ const sampleMains = {
     status: 'available',
     serving: 1,
     servingType: "portion",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   },
   main8: {
     name: 'Rump (300g)',
@@ -69,7 +76,8 @@ const sampleMains = {
     status: 'available',
     serving: 1,
     servingType: "portion",
-    sauce: "none"
+    sauce: "none",
+    catagory: "mains"
   }
 };
 

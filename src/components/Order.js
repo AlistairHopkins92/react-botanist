@@ -8,13 +8,15 @@ class Order extends React.Component {
     }
 
     renderOrder(key) {
-        console.log([key])
+        console.log(key)
+        console.log(this.props)
         const page = this.props.page
-        const count = this.props.order[key];
-        const unit = this.props.starters[key]
+        const count = this.props.order.mains[key];
+        const main = this.props.mains[key]
+        console.log(main)
+        console.log(count)
         if(page === 'mains'){
             console.log('mains')
-            const main = this.props.mains[key];
             if(main.servingType === 'grams') {
                 return (
                 <li key={key}>
@@ -31,20 +33,18 @@ class Order extends React.Component {
                 </li>
             )
             }
-        }else if(this.props.starters[key]){
-            // console.log('starters')
-            const unit = this.props.starters[key]
         }
+        
         
  
     }
     render() {
-        const orderIds = Object.keys(this.props.order)
+        const orderIds = Object.keys(this.props.order.mains)
         console.log(orderIds)
         const total = orderIds.reduce((prevTotal, key) => {
             const main = this.props.mains[key];
             const starter = this.props.starters[key]
-            const count = this.props.order[key];
+            const count = this.props.order.mains[key];
             const isAvailable = main && main.status === "available";
             if (isAvailable) {
                 return prevTotal + (count * main.price || 0)

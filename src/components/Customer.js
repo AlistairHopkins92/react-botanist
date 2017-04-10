@@ -22,7 +22,6 @@ constructor() {
 
 
 state = {
-    order: {},
     mains: sampleMains,
     sides: sampleSides,
     drinks: sampleDrinks,
@@ -31,6 +30,13 @@ state = {
     starters: sampleStarters,
     header: "Starters",
     currentpage: 'starters',
+    order: {mains:{},
+            sides:{},
+            drinks:{},
+            cocktails:{},
+            puddings: {},
+            starters: {}
+          }
   };
 
   addItem(item, itemType) {
@@ -130,17 +136,19 @@ loadMenu(page) {
     this.setState({
       currentpage: page,
     });
-    console.log(this.state)
+    // console.log(this.state)
 }
 
-addToOrder(key) {
-  // console.log(key)
-  const order = {...this.state.order}
-  // console.log(order)
-  order[key] = order[key] + 1 || 1;
-  console.log(order)
-  this.setState({order})
+addToOrder(key, details) {
+  console.log(key)
+  console.log('details below')
   console.log(this.state.order)
+  // console.log(details.catagory)
+  const order = {...this.state.order}
+  console.log(order)
+  order.mains[key] = order.mains[key] + 1 || 1;
+  this.setState({order})
+  console.log(order)
 }
 
   render() {
