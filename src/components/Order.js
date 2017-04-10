@@ -9,13 +9,13 @@ class Order extends React.Component {
 
     renderOrder(key) {
         console.log(key)
-        console.log(this.props)
+        console.log(Object.keys(this.props.order.mains).length)
         const page = this.props.page
         const count = this.props.order.mains[key];
         const main = this.props.mains[key]
         console.log(main)
         console.log(count)
-        if(page === 'mains'){
+        if(Object.keys(this.props.order.mains).length > 0){
             console.log('mains')
             if(main.servingType === 'grams') {
                 return (
