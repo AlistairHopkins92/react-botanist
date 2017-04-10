@@ -8,30 +8,23 @@ class Order extends React.Component {
     }
 
     renderOrder(key) {
-        console.log(key)
-        console.log(Object.keys(this.props.order.mains).length)
-        const page = this.props.page
         const count = this.props.order.mains[key];
         const main = this.props.mains[key]
-        console.log(main)
-        console.log(count)
         if(Object.keys(this.props.order.mains).length > 0){
-            console.log('mains')
             if(main.servingType === 'grams') {
                 return (
-                <li key={key}>
-                    <span>{count}00 grams {main.name} </span>
-                    <span className="price">{formatPrice(count * main.price)}</span>
-                </li>  
+                    <li key={key}>
+                        <span>{count}00 grams {main.name} </span>
+                        <span className="price">{formatPrice(count * main.price)}</span>
+                    </li>  
                 )
-            }else{
-    
-             return (
-                <li key={key}>
-                    <span>{count} X {main.name} </span>
-                    <span className="price">{formatPrice(count * main.price)}</span>
-                </li>
-            )
+            }else{    
+                return (
+                    <li key={key}>
+                        <span>{count} X {main.name} </span>
+                        <span className="price">{formatPrice(count * main.price)}</span>
+                    </li>
+                )
             }
         }
         
@@ -40,7 +33,6 @@ class Order extends React.Component {
     }
     render() {
         const orderIds = Object.keys(this.props.order.mains)
-        console.log(orderIds)
         const total = orderIds.reduce((prevTotal, key) => {
             const main = this.props.mains[key];
             const starter = this.props.starters[key]
@@ -51,7 +43,6 @@ class Order extends React.Component {
             }
             return prevTotal;
         }, 0)
-        console.log(total)
         return (
             <div className="order-div">
                 <h2>Your Order</h2>
