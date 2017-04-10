@@ -1,5 +1,5 @@
 .order-div {
-  padding: 10px;
+  padding: 0px 10px;
   width: 33.33%;
   float: right;
   margin-top: 20px;
@@ -303,9 +303,17 @@ header.top h3:after {
   top: auto;
   bottom: 7px;
 }
-header.top img {
-  width: 50%;
+header.top img.banner {
+  width: 40%;
+  margin-top: -10px;
 }
+header.top img.flip {
+  width: 40%;
+   -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin: -10px 0px -15px;
+}
+
 .customerView {
   display: relative;
 }
@@ -499,8 +507,8 @@ ul.order li span.count span {
 }
 .menu-mains img {
   text-align: center;
-  width: 50%;
-  margin-left: 25%;
+  width: 30%;
+  margin-left: 35%;
   border: 3px solid #000;
 }
 .menu-mains button {
