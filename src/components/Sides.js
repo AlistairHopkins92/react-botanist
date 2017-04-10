@@ -3,7 +3,7 @@ import { formatPrice } from '../helpers';
 
 class Sides extends React.Component {
     render() {
-        const { details } = this.props;
+        const { details, index } = this.props;
         const isAvailable = details.status === 'available';
         const buttonText = isAvailable ? "Add To Order" : "Sold Out";
 
@@ -17,7 +17,7 @@ class Sides extends React.Component {
                     <p className="price">{formatPrice(details.price)}</p>
                 </h4>
                 <h4>
-                    <button disabled={!isAvailable}>{buttonText}</button>
+                    <button onClick={() => this.props.addToOrder(index)} disabled={!isAvailable}>{buttonText}</button>
                 </h4>
             </li>
         )
