@@ -17,8 +17,8 @@ class App extends React.Component {
     return (
       <div className="botanist">
       <div className="backgkgroundImage">
-        <Header title={pageTitle}/>
         <PageHeader page="Customer"/>
+        <Header title={pageTitle}/>
       </div>
         <Customer />
       </div>

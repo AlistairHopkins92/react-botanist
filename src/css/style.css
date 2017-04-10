@@ -209,7 +209,7 @@ table {
 }
 body,
 figure {
-  margin: 1px;
+  margin: 0px;
 }
 legend,
 button::-moz-focus-inner,
@@ -253,17 +253,18 @@ h6 {
 }
 h2, h4 {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 h3 {
   font-size: 3rem;
 }
 header.top {
   text-align: center;
+  background: url("images/header-image.jpeg") center no-repeat;
 }
 header.top h1 {
-  font-size: 14.4rem;
+  font-size: 10.4rem;
   line-height: 0.7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,11 +305,11 @@ header.top h3:after {
   bottom: 7px;
 }
 header.top img.banner {
-  width: 40%;
+  width: 30%;
   margin-top: -10px;
 }
 header.top img.flip {
-  width: 40%;
+  width: 30%;
    -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   margin: -10px 0px -15px;
@@ -323,7 +324,7 @@ pageheader.top {
 ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0px 20px;
 }
 ul.order li {
   border-bottom: 1px solid #000;
