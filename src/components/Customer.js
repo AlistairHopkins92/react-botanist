@@ -139,8 +139,11 @@ loadMenu(page) {
 }
 
 addToOrder(key, details) {
+  console.log(details.catagory)
   const order = {...this.state.order}
-  order.mains[key] = order.mains[key] + 1 || 1;
+  if(details.catagory === "mains"){
+    order.mains[key] = order.mains[key] + 1 || 1;
+  }
   this.setState({order})
 }
 

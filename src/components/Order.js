@@ -4,10 +4,10 @@ import { formatPrice } from "../helpers"
 class Order extends React.Component {
     constructor() {
         super();
-        this.renderOrder = this.renderOrder.bind(this);
+        this.renderMainsOrder = this.renderMainsOrder.bind(this);
     }
 
-    renderOrder(key) {
+    renderMainsOrder(key) {
         const count = this.props.order.mains[key];
         const main = this.props.mains[key]
         if(Object.keys(this.props.order.mains).length > 0){
@@ -27,13 +27,11 @@ class Order extends React.Component {
                 )
             }
         }
-        
-        
- 
     }
+
     render() {
-        const orderIds = Object.keys(this.props.order.mains)
-        const total = orderIds.reduce((prevTotal, key) => {
+        const mainOrderIds = Object.keys(this.props.order.mains)
+        const total = mainOrderIds.reduce((prevTotal, key) => {
             const main = this.props.mains[key];
             const starter = this.props.starters[key]
             const count = this.props.order.mains[key];
@@ -47,7 +45,7 @@ class Order extends React.Component {
             <div className="order-div">
                 <h2>Your Order</h2>
                 <ul className="order">
-                    {orderIds.map(this.renderOrder)}
+                    {mainOrderIds.map(this.renderMainsOrder)}
                     <li className="total">
                         <strong>Total:</strong>
                         {formatPrice(total)}

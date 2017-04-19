@@ -18,7 +18,7 @@ class Mains extends React.Component {
                     <p className="price">{formatPrice(details.price)}</p>
                 </h4>
                 <h4>
-                    <button onClick={() => this.props.addToOrder(index)} disabled={!isAvailable}>{buttonText}</button>
+                    <button onClick={() => this.props.addToOrder(index, details)} disabled={!isAvailable}>{buttonText}</button>
                 </h4>
             </li>
         )
